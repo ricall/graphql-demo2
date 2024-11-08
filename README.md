@@ -13,6 +13,13 @@ This will start a graphQL server on `http://localhost:8080/graphql`
 
 You can use the `graphiql` interface for testing the API: `http://localhost:8080/graphiql`
 
+### Running as a native image
+```bash
+./gradlew nativeRun
+```
+
+This will compile the application into a single executable ~ 100Mb in size and run it locally
+
 ### Variables
 ```json
 {
