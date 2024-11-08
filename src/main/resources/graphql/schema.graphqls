@@ -1,0 +1,28 @@
+type Query {
+    tutorials: [Tutorial]!
+    tutorialById(id: ID): Tutorial
+
+    authors: [Author]!
+    authorById(id: ID): Author
+}
+
+type Mutation {
+    deleteTutorial(id: ID!): Tutorial
+    saveTutorial(id: ID, title: String!, description: String!, authorId: ID!): Tutorial!
+
+    saveAuthor(id: ID, name: String!, age: Int): Author!
+    deleteAuthor(id: ID!): Author
+}
+
+type Tutorial {
+    id: ID!
+    title: String!
+    description: String!
+    author: Author
+}
+
+type Author {
+    id: ID!
+    name: String!
+    age: Int!
+}

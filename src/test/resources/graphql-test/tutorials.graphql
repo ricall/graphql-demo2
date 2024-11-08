@@ -1,0 +1,12 @@
+query tutorials($id: ID) {
+    tutorialById(id: $id) {
+        id
+        title
+        description
+        author {
+            id
+            name
+            age
+        }
+    }
+}
